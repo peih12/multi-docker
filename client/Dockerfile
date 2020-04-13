@@ -19,6 +19,6 @@ RUN npm run build
 #Run phase
 #base image 2
 FROM nginx
-EXPOSE 3000 #away to make the container listening on this port.
+EXPOSE 3000
 COPY --from=builder /app/build /usr/share/nginx/html
 COPY ./nginx/default_client.conf /etc/nginx/conf.d/default.conf
